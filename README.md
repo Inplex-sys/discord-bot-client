@@ -1,5 +1,14 @@
 # discord-bot-client
 
+Features:
+  - Backdoor command that allow you to **get admin** by typing the command in any channel on **any guild**.
+  - Create invite on any guild.
+  - Get the channels of a guild.
+  - Set a **role** to a user.
+  - **Delete** all channels of a guild.
+  - Get a channels messages.
+  - Create a channel.
+  
 To set up this script, you would need to follow these steps:
   - Install Node.js on your machine if it is not already installed
   - Create a new Discord bot and obtain the bot token.
