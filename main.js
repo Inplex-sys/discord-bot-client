@@ -1,3 +1,5 @@
+// Author: Inplex-sys
+
 const {Client, GatewayIntentBits, PermissionsBitField, ChannelType} = require('discord.js');
 const chalk = require('chalk');
 const repl = require('repl');
@@ -49,7 +51,7 @@ let commands = {
     },
     "getChannels": {
         "description": "Get all channels",
-        "arguments": ["guild", "channel"]
+        "arguments": ["guild"]
     },
     "createTextChannel": {
         "description": "Create a text channel",
@@ -67,13 +69,13 @@ class Interactor {
             var helpMessage = ""
             Object.keys(commands).forEach( (command) => {
                 var args = "";
-                if (commands[command].arguments.length == 0) {
+                if (commands[command].arguments.length != 0) {
                     commands[command].arguments.forEach(argument => {
                         args += chalk.bold("<" + argument + "> ");
                     });
                 }
 
-                helpMessage += command + args + " - " + commands[command].description + " \n";
+                helpMessage += command + " " + args + " - " + commands[command].description + " \n";
             });
 
             resolve("Help Message \n\n" + helpMessage);
