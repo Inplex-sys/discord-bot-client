@@ -7,7 +7,7 @@ class CreateChannel extends Command {
     constructor(client: Client<boolean>) {
         super(client, {
             description: 'Create a channel in the guild',
-            arguments: ['type'],
+            arguments: ['guild', 'type'],
         });
     }
 

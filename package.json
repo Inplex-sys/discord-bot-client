@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "chalk": "^5.4.1",
+    "console-table-printer": "^2.12.1",
     "discord.js": "^14.17.2",
     "repl": "^0.1.3"
   }

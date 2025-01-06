@@ -1,4 +1,5 @@
 import { Client, GatewayIntentBits, PermissionsBitField } from 'discord.js';
+import { printTable } from 'console-table-printer';
 import chalk from 'chalk';
 import * as tty from 'node:tty';
 import * as readline from 'node:readline';
@@ -52,7 +53,7 @@ client.on('ready', () => {
                     if (data instanceof Error) {
                         console.error(data);
                     } else if (data instanceof Object) {
-                        console.table(data);
+                        printTable(data);
                     } else {
                         console.log(data);
                     }
